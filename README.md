@@ -11,6 +11,8 @@ git branch                  # Ver ramas locales
 git branch -r               # Ver ramas remotas
 git branch -a               # Ver ramas locales y remotas
 git branch -v               # Ver última referencia de cada rama local
+git branch -vv              # Ver ramas vinculadas a su remoto, si estan actualizadas o adelantadas
+
 git log --oneline           # Ver historial de commits en una línea
 git log -n 5 --oneline      # Ver los últimos 5 commits
 git log origin/mi-rama..HEAD --oneline  # Ver commits locales no subidos
@@ -28,7 +30,18 @@ git checkout -b local origin/remota         # Crear rama local basada en rama re
 git push -u origin nueva-rama               # Subir nueva rama y establecer tracking
 ```
 
+---
+
 ## Fusionar y actualizar ramas
+
+```bash
+git checkout develop
+git pull origin develop                     # Actualizar rama local
+git merge master                            # Fusionar master en develop
+
+```
+
+## Reset y limpieza de commits
 
 ```bash
 git reset HEAD~1                            # Quitar último commit (mantiene cambios)
@@ -53,4 +66,33 @@ git diff-tree --no-commit-id --name-only -r <hash>  # Solo nombres de archivos m
 git status                                  # Ver estado actual vs remoto
 git remote -v                               # Ver URL del remoto
 git remote show origin                      # Ver detalles del remoto y ramas trackeadas
+
+```
+
+## Información extra
+
+```bash
+git branch --show-current                   # Saber en qué rama estás
+```
+
+## 🧭 Configuración de Tracking entre Ramas
+
+En Git, puedes vincular una rama local con una rama remota para poder usar `git pull` y `git push` sin tener que especificar el nombre remoto o de la rama cada vez. Aquí te mostramos cómo y cuándo usar las dos opciones más comunes:
+
+---
+
+### ✅ `git push -u origin mi-rama`
+
+Usa esto cuando estás creando y subiendo una **nueva rama** al remoto por primera vez:
+
+```bash
+git checkout -b mi-rama
+git push -u origin mi-rama
+
+```
+### ✅ `git branch --set-upstream-to=origin/otra-rama`
+
+git checkout hotfix
+git branch --set-upstream-to=origin/develop
+
 
