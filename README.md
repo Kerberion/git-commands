@@ -7,7 +7,7 @@ Una recopilación rápida de comandos Git usados frecuentemente para desarrollo 
 ## 🔍 Ver ramas y commits
 
 ```bash
-git branch                   # Ver ramas locales
+git branch                  # Ver ramas locales
 git branch -r               # Ver ramas remotas
 git branch -a               # Ver ramas locales y remotas
 git branch -v               # Ver última referencia de cada rama local
