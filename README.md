@@ -96,3 +96,29 @@ git checkout hotfix
 git branch --set-upstream-to=origin/develop
 
 
+## 📌 Flujo típico: modificar → agregar → commitear → enviar
+
+Cuando haces cambios en archivos dentro de tu repositorio, Git no los incluye automáticamente en el commit. Debes seguir este flujo:
+
+---
+
+### 1️⃣ Ver el estado actual
+
+```bash
+git status
+```
+### Agregar archivos al staging area
+```
+git add archivo1.cs carpeta/archivo2.js   # Agregar archivos específicos
+git add .                                 # Agregar todos los archivos modificados y nuevos
+```
+### Hacer el commit
+```
+git commit -m "Descripción clara de los cambios"
+```
+Subir los cambios al remoto
+```
+git push
+```
+
+
