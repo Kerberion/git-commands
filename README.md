@@ -102,21 +102,21 @@ Cuando haces cambios en archivos dentro de tu repositorio, Git no los incluye au
 
 ---
 
-### 1️⃣ Ver el estado actual
+### 1 Ver el estado actual
 
 ```bash
 git status
 ```
-### Agregar archivos al staging area
+### 2 Agregar archivos al staging area
 ```
 git add archivo1.cs carpeta/archivo2.js   # Agregar archivos específicos
 git add .                                 # Agregar todos los archivos modificados y nuevos
 ```
-### Hacer el commit
+### 3 Hacer el commit
 ```
 git commit -m "Descripción clara de los cambios"
 ```
-Subir los cambios al remoto
+### 4 Subir los cambios al remoto
 ```
 git push
 ```
