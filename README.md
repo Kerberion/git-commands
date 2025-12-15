@@ -122,3 +122,20 @@ git push
 ```
 
 
+## 🔍 Ver diferencias de archivos modificados
+
+Git te permite comparar fácilmente los cambios realizados en tus archivos antes de confirmar (commit).
+
+---
+
+### ✅ Ver cambios **NO agregados al staging area**
+
+```bash
+git diff ruta/del/archivo
+```
+### ✅ Ver cambios que ya agregaste con git add
+
+```bash
+git diff --cached ruta/del/archivo
+
+
