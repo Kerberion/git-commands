@@ -65,6 +65,7 @@ git diff-tree --no-commit-id --name-only -r <hash>  # Solo nombres de archivos m
 ```bash
 git status                                  # Ver estado actual vs remoto
 git remote -v                               # Ver URL del remoto
+git remote set-url origin [Url]             # Cambiar la URL del remoto origin
 git remote show origin                      # Ver detalles del remoto y ramas trackeadas
 
 ```
@@ -137,5 +138,4 @@ git diff ruta/del/archivo
 
 ```bash
 git diff --cached ruta/del/archivo
-
 
